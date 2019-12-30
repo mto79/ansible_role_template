@@ -1,0 +1,5 @@
+---
+# ansible_role_template/vars/main.yml
+# Author: MTO 
+# Description: Vars main file for ansible_role_template
+#
