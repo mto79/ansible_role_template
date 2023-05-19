@@ -1,7 +1,7 @@
 Ansible Role Template
 =========
 
-[![Molecule Test](https://github.com/mto79/ansible_role_template/actions/workflows/molecule.yml/badge.svg)](https://github.com/mto79/ansible_role_template/actions/workflows/molecule.yml)
+[![Molecule Test](https://github.com/diademiemi/ansible_role_template/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_template/actions/workflows/molecule.yml)
 
 This is an Ansible role to install and configure template.
 
@@ -42,12 +42,12 @@ Example Playbook
 ----------------
 
 ```yaml
-- role: "mto79.template"
-  vars:
-    __role_action: # Variable to control which tasks are ran
-      - "setup" # Default if none is given
-      # - "upstream" # Uncomment to delegate to role from upstream provider
-  tags: ['mto79', 'template']    ```
+    - role: "diademiemi.template"
+      vars:
+        __role_action: # Variable to control which tasks are ran
+          - "setup" # Default if none is given
+          # - "upstream" # Uncomment to delegate to role from upstream provider
+      tags: ['diademiemi', 'template', 'setup']    ```
 
 ```
 
@@ -59,20 +59,18 @@ MIT
 Author Information
 ------------------
 
-- MTO79 (@mto79)
+- diademiemi (@diademiemi)
 
 Role Testing
 ------------
 
 This repository comes with Molecule tests for Docker on the supported platforms.
 Install Molecule by running
-
 ```bash
 pip3 install -r requirements.txt
 ```
 
 Run the tests with
-
 ```bash
 molecule test
 ```
@@ -91,18 +89,17 @@ Please see [tasks/upstream/default.yml](./tasks/upstream/default.yml) for an exa
 
 This is an easy way to provide distro-specific variables, assertions and tasks and allows me to keep the role structure clean.  
 
-GitHub Actions is supposed to fail for this template repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `template` which causes the test to fail.
+GitHub Actions is supposed to fail for this template repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `template` which causes the test to fail.    
 
 Using Template
 --------------
 To use this template for a new role, run
-
 ```bash
 export NEW_ROLE_NAME="NEW_NAME"
-export GITHUB_USER="mto79"
+export GITHUB_USER="diademiemi"
 export GALAXY_API_KEY="YOUR_API_KEY"
 
-find . -type f -exec sed -i "s/mto79/${GITHUB_USER}/g" {} + # Do not run this more than once
+find . -type f -exec sed -i "s/diademiemi/${GITHUB_USER}/g" {} + # Do not run this more than once
 find . -type f -exec sed -i "s/template/${NEW_ROLE_NAME}/g" {} + # Do not run this more than once
 
 # Assumes repo is named ansible_role_${NEW_ROLE_NAME}
