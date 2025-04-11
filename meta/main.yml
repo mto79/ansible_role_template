@@ -1,33 +1,33 @@
 ---
 galaxy_info:
-  author: MTO79
-  role_name: collection_role
-  description: Description role in collection.
-  license: MIT
-  min_ansible_version: "2.11.0"
+  author: "MTO79"
+  role_name: "collection_role"
+  description: "Description role in collection."
+  license: "MIT"
+  min_ansible_version: "2.15.0"
   standalone: true
 
   platforms:
-    - name: EL
+    - name: "EL"
       versions:
         - "7"
         - "8"
         - "9"
-    - name: Debian
+    - name: "Debian"
       versions:
-        - all
-    - name: Fedora
+        - "all"
+    - name: "Fedora"
       versions:
-        - all
-    - name: Ubuntu
+        - "all"
+    - name: "Ubuntu"
       versions:
-        - all
+        - "all"
 
   galaxy_tags:
-    - mto79
-    - collection
-    - linux
-    - role
+    - "linux"
+    - "mto79"
+    - "collection"
+    - "role"
 
 dependencies: []
 
