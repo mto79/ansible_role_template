@@ -1,7 +1,7 @@
 Ansible Role Template
 =========
 
-[![Molecule Test](https://github.com/diademiemi/ansible_role_template/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_template/actions/workflows/molecule.yml)
+[![Molecule Test](https://github.com/mto79/ansible_role_template/actions/workflows/molecule.yml/badge.svg)](https://github.com/mto79/ansible_role_template/actions/workflows/molecule.yml)
 
 This is an Ansible role to install and configure template.
 
@@ -42,12 +42,12 @@ Example Playbook
 ----------------
 
 ```yaml
-    - role: "diademiemi.template"
+    - role: "mto79.template"
       vars:
         __role_action: # Variable to control which tasks are ran
           - "setup" # Default if none is given
           # - "upstream" # Uncomment to delegate to role from upstream provider
-      tags: ['diademiemi', 'template', 'setup']    ```
+      tags: ['mto79', 'template', 'setup']    ```
 
 ```
 
@@ -59,7 +59,7 @@ MIT
 Author Information
 ------------------
 
-- diademiemi (@diademiemi)
+- mto79 (@mto79)
 
 Role Testing
 ------------
@@ -96,10 +96,10 @@ Using Template
 To use this template for a new role, run
 ```bash
 export NEW_ROLE_NAME="NEW_NAME"
-export GITHUB_USER="diademiemi"
+export GITHUB_USER="mto79"
 export GALAXY_API_KEY="YOUR_API_KEY"
 
-find . -type f -exec sed -i "s/diademiemi/${GITHUB_USER}/g" {} + # Do not run this more than once
+find . -type f -exec sed -i "s/mto79/${GITHUB_USER}/g" {} + # Do not run this more than once
 find . -type f -exec sed -i "s/template/${NEW_ROLE_NAME}/g" {} + # Do not run this more than once
 
 # Assumes repo is named ansible_role_${NEW_ROLE_NAME}
